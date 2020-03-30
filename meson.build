@@ -26,12 +26,8 @@ project(
   version : '0.0.1',
   license : 'MIT',
   meson_version : '>= 0.47',
-  default_options : ['c_std=c99', 'warning_level=2']
+  default_options : ['warning_level=2']
 )
-
-if get_option('c_std') != 'c99'
-  error('c_std must be c99')
-endif
 
 sources = files(
   'common.c',
